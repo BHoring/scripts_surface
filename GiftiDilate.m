@@ -1,7 +1,7 @@
 % Close gaps in surface patch (cdata) projected on surface mesh.
 % Intended for application on SPM surfaces (e.g. as obtained via CAT12).
 %
-% Download sampleMesh.gii and samplePatch.gii for demo purposes.
+% Download demoMesh.gii and demoPatch.gii for demo purposes.
 %
 % Also see companion function GiftiErode.m.
 %
@@ -24,9 +24,9 @@ function GiftiDilate(varargin)
 
     if ~nargin % use demo settings, requires 
         cP              = fileparts(mfilename('fullpath'));
-        meshPath        = [cP filesep 'sampleMesh.gii'];
-        patchPath       = [cP filesep 'samplePatch.gii']; % expects binary data for now, with valid entry==1
-        outPath         = [cP filesep 'dilatedPatch.gii'];
+        meshPath        = [cP filesep 'demoMesh.gii'];
+        patchPath       = [cP filesep 'demoPatch.gii']; % expects binary data for now, with valid entry==1
+        outPath         = [cP filesep 'demoPatchDilated.gii'];
         NIt             = 2; % number of dilations, recommended 2+ to close intra-patch gaps
         saveFullMesh    = 1;
         
